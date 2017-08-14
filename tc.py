@@ -35,5 +35,5 @@ class S(BaseHTTPServer.BaseHTTPRequestHandler):
         self._set_headers()
         self.wfile.write("<html><body><h1>POST!</h1></body></html>")
 
-httpd = HTTPServerV6(('localhost', 4443), S)
+httpd = HTTPServerV6(('::', 4443), S)
 httpd.serve_forever()
